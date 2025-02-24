@@ -1,0 +1,53 @@
+\section{Stellar Structure and Evolution}
+To analyze the influence of factors like initial mass, metallicity, CBM, and nuclear networks on stellar evolution, uniform and comprehensive stellar models are essential. This paper uses the latest MESA code (r24.03.01), with Section 2.1 covering the governing equations, Section 2.2 detailing model properties, and Section 2.3 explaining tools used to study stellar evolution.
+\subsection{Differential Equations of Stellar Evolution}
+The fundamental equations that govern stellar evolution are as follows:
+
+\vspace{1em}
+\noindent
+\textbf{Conservation of Mass}
+\begin{align*}
+\frac{\partial r}{\partial m} &= \frac{1}{4\pi r^2 \rho} \tag{2.1} 
+\end{align*}
+
+
+\noindent
+\textbf{Dynamic Equation of Pressure}
+\begin{align*}
+\frac{\partial P}{\partial m} &= -\frac{G m}{4\pi r^4} - \frac{1}{4\pi r^4} \frac{\partial^2 r}{\partial t^2} \tag{2.2}
+\end{align*}
+
+\noindent
+\textbf{Conservation of Energy}
+\begin{align*}
+\frac{\partial l}{\partial m} &= \epsilon_{\text{nuc}} - \epsilon_{\nu} - T \frac{\partial s}{\partial t} \tag{2.3} 
+\end{align*}
+\(\mathbf{l}\): luminosity at a given mass shell, \(\mathbf{s}\): entropy, \(\boldsymbol{\epsilon}_{\nu}\): energy lost due to neutrino emission, \(\boldsymbol{\epsilon}_{\text{nuc}}\): energy generation rate per unit mass due to nuclear reactions.
+
+\vspace{1em}
+\noindent
+\textbf{Temperature Gradient Equation}
+\begin{align*}
+\frac{\partial T}{\partial m} &= -\frac{G m}{4\pi r^4} \frac{T}{P} \nabla, \quad \text{with} \quad \nabla = \begin{cases} 3\kappa \nabla_{\text{rad}} = \frac{l P}{m T^4} & \text{if }\nabla_{\text{rad}} \leq \nabla_{\text{ad}} \\ 
+\nabla_{\text{ad}} + \Delta \nabla & \text{if } \nabla_{\text{rad}} > \nabla_{\text{ad}} 
+\end{cases} \tag{2.4} \\
+\end{align*}
+\(\mathbf{\nabla}\): Temperature gradient, \(\Delta \mathbf{\nabla}\): Convective adjustment: the difference between the actual temperature gradient and the adiabatic temperature gradient.
+
+\vspace{1em}
+\noindent
+\textbf{Abundance Evolution}
+\begin{align*}
+\frac{\partial X_i}{\partial t} &= \frac{A_i m_u}{\rho} \left( - \sum_{j} (1 + \delta_{ij}) r_{ij} + \sum_{k,l} r_{kl,i} \right) \quad [\text{+ mixing terms}] \quad i=1 \ldots N \tag{2.5}
+\end{align*}
+\(\mathbf{X_i}\): Abundance of species \(i\) (e.g., hydrogen, helium), \(\mathbf{A_i}\): Atomic mass of species \(i\), \(\mathbf{m_u}\): Atomic mass unit, \(\mathbf{r_{ij}}\): Reaction rates for the transformation of species \(j\) to \(i\), \(\mathbf{\delta_{ij}}\): Kronecker delta, which is 1 if \(i = j\) and 0 otherwise.
+
+\vspace{1em}
+\noindent
+\textbf{N.B:} Equation 1.2 is written in its general form, without assuming hydrostatic equilibrium, if we assume the star to be in hydrostatic equilibrium the equation is written as follows: 
+\begin{align*}
+\frac{\partial P}{\partial m} &= -\frac{G m}{4\pi r^4}  \tag{2.6}
+\end{align*}
+
+\noindent
+The term $\Delta \nabla$ in equation 1.4, represents the superadiabaticity of the temperature gradient, which arises from a theory of convection (typically, the mixing length theory). In the star’s interior,  $\Delta \nabla$ can be considered zero, except in the outermost layers.

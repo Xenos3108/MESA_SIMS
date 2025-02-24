@@ -1,0 +1,95 @@
+\section{Model Parameters}
+\subsection{Nuclear Reaction Networks}
+The nuclear networks used in models differ primarily in the complexity and scope of reactions they calculate, not just in the number of isotopes they include. Networks with more isotopes enable a greater variety of reactions, increasing the model’s accuracy in simulating stellar burning stages. Simpler networks, like the basic or default network \texttt{approx21\_cr60\_plus\_co56.net} (A21), focus on essential isotopes and reactions needed to model primary stages of nuclear burning. 
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{>{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c}
+        \hline\hline
+        \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} \\
+        \hline
+        n & 0 & 1 & & Ne & 10 & 20 & &Cr & 24 & 48 &  \\
+        p & 1 & 1 & & Mg & 12 & 24 &  &  Fe & 26 & 52 &  \\
+        H & 1 & 1 &  & Si & 14 & 38 &  &Fe & 26 & 54 &  \\
+        He & 2 & 3 & 4 & S & 16 & 32 &  &Fe & 26 & 56 &  \\
+        C & 6 & 12 &  & Ar & 18 & 36 & &  Ni & 28 & 56 & \\
+        N & 7 & 14 &  & Ca & 20 & 40 &  & *Cr & 24 & 60  &  \\
+        O & 8 & 16 &  & Ti & 22 & 44 &  & *Co & 27 & 56 &  \\
+        \hline
+    \end{tabular}
+    \caption{List of isotopes employed in the \texttt{approx21\_cr60\_plus\_co56.net} nuclear network; elements $^{60}$Cr and $^{56}$Co were included in the network.}
+    \label{tab:a21}
+\end{table}
+
+\vspace{-1em}
+\noindent
+More comprehensive networks include additional isotopes, allowing for detailed modeling of advanced burning stages, which is crucial in accurately simulating late stellar evolution, in addition to A21, nuclear networks such as \texttt{o\_burn\_full.net}(OB), \texttt{mesa\_128.net}(M128), and \texttt{mesa\_206.net}(M206) were used in the study. 
+\begin{table}[h!]
+    \centering
+    % First table
+    \begin{tabular}{>{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c}
+        \hline\hline
+        \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} \\
+        \hline
+        n & 0 & 1 & 1 & N & 7 & 13 & 16 & P & 15 & 30 & 34 \\
+        H & 1 & 1 & 2 & O & 8 & 14 & 19 & S & 16 & 31 & 37 \\
+        He & 2 & 3 & 4 & F & 9 & 17 & 20 & Cl & 17 & 35 & 38 \\
+        Li & 3 & 6 & 7 & Ne & 10 & 18 & 23 & Ar & 18 & 35 & 41 \\
+        Be & 4 & 7 & & Na & 11 & 21 & 24 & K & 19 & 39 & 44 \\
+        Be & 4 & 9 & 10 & Mg & 12 & 23& 27 & Ca & 20 & 39 & 44 \\
+        B & 5 & 8 & & Al & 13 & 25 & 28 & Ca & 20 & 46 & \\
+        B & 5 & 10 & 11 & Si & 14 & 27 & 33 & Ca & 20 & 48 & \\
+        C & 6 & 12 & 14 & & & & & & & &\\
+        \hline
+    \end{tabular}
+    \caption{List of isotopes employed in the \texttt{o\_burn\_full.net} nuclear network}
+    \label{tab:ob}
+\end{table}
+\vspace{-3em} % Optional space between tables
+
+% Second table
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{>{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c}
+        \hline\hline
+        \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} \\
+        \hline
+        n & 0 & 1 & 1 & Ne & 10 & 18 & 22 & Sc & 21 & 43 & 46  \\
+        H & 1 & 1 & 2 & Na & 11 & 21 & 24 & Ti & 22 & 44 & 48 \\
+        He & 2 & 3 & 4 & Mg & 12 & 23 & 26 & V & 23 & 47 & 51 \\
+        Li & 3 & 7 &  & Al & 13 & 25 & 28  & Cr & 24 & 48 & 57 \\
+        Be & 4 & 7 & & Si & 14 & 27 & 30 & Mn & 25 & 51 & 56  \\
+        Be & 4 & 9 & 10 & P & 15 & 30 & 32 & Fe & 26 & 52 & 58 \\
+        B & 5 & 8 & & S & 16 & 31 & 34 & Co & 27 & 55 & 60 \\
+        C & 6 & 12 & 13 & Cl & 17 & 35 & 37 & Ni & 28 & 55 & 61  \\
+        N & 7 & 14 & 15 & Ar & 18 & 35 & 38 & Cu & 29 & 59 & 62 \\
+        O & 8 & 14 & 18 & K & 19 & 39 & 43 & Zn & 30 & 60 & 64 \\
+        F & 9 & 17 & 19 & Ca & 20 & 39 & 44 & & & & \\
+        \hline
+    \end{tabular}
+    \caption{List of isotopes employed in the \texttt{mesa\_128.net} nuclear network }
+    \label{tab:m128}
+\end{table}
+
+% Third table
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{>{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c | >{\raggedright\arraybackslash}p{1.5cm} c c c}
+        \hline\hline
+        \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} & \textbf{Element} & \textbf{Z} & \textbf{A\textsubscript{min}} & \textbf{A\textsubscript{max}} \\
+        \hline
+        n & 0 & 1 & 1 & F & 9 & 17 & 20 & Ca & 20 & 39 & 49  \\
+        H & 1 & 1 & 2 & Ne & 10 & 18 & 23 & Sc & 21 & 43 & 51 \\
+        He & 2 & 3 & 4 & Na & 11 & 21 & 24 & Ti & 22 & 43 & 54 \\
+        Li & 3 & 6 & 7 &  Mg & 12 & 23 & 27 & V & 23 & 47 & 56 \\
+        Be & 4 & 7 & & Al & 13 & 25 & 28 & Cr & 24 & 47 & 58  \\
+        Be & 4 & 9 &10 & Si & 14 & 27 & 33 & Mn & 25 & 51 & 59 \\
+        B & 5 & 8 & & P & 15 & 30 & 34 & Fe & 26 & 51 & 66 \\
+        B & 5 & 10 & 11 & S & 16 & 31 & 37 & Co & 27 & 55 & 67\\
+        C & 6 & 12 & 13 & Cl & 17 & 35 & 38 & Ni & 28 & 55 & 68 \\
+        N & 7 & 13 & 16 & Ar & 18 & 35 & 41 & Cu & 29 & 59 & 66 \\
+        O & 8 & 14 & 19 & K & 19 & 39 & 44& Zn & 30 & 59 & 66  \\ 
+        \hline
+    \end{tabular}
+    \caption{List of isotopes employed in the \texttt{mesa\_206.net} nuclear network}
+    \label{tab:m206}
+\end{table}

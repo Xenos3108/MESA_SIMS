@@ -1,0 +1,164 @@
+\section{Analysis of Burning Stages}
+\subsection{Across Nuclear Networks}
+
+The nuclear burning sequence of a massive star follows a well-defined progression, where hydrogen, helium, carbon, and heavier elements fuse in successive stages. Each burning phase leaves behind ashes that serve as fuel for the next stage, ultimately determining the star's final fate. The core temperature ($T_c$) and density ($\rho_c$) dictate the nuclear reaction rates, while convection plays a critical role in mixing newly synthesized elements throughout the star.
+
+\vspace{1em}
+\noindent
+This section examines the impact of different nuclear networks on a $20 M_\odot$ model at solar metallicity ($Z = Z_\odot$), using four networks: \texttt{approx21} (A21), \texttt{o\_burn\_full} (OB), \texttt{mesa\_128} (M128), and \texttt{mesa\_206} (M206). The Kippenhahn plots in Figure~\ref{fig:NucKips} provide a visualization of convective and radiative zones over time, while Figure~\ref{fig:HRD} traces their evolution in the Hertzsprung-Russell (HR) diagram. These models are compared at key evolutionary stages: main sequence, hydrogen and helium exhaustion, and carbon ignition.
+
+\subsubsection{Main Sequence and Hydrogen Burning}
+
+The star enters the main sequence phase with a convective hydrogen-burning core, where the CNO cycle dominates energy production. Initially, all networks exhibit similar conditions, with \(\log L / L_\odot = 4.630\) and \(\log T_{\rm eff} = 4.545\). The core temperature and density at the start of hydrogen burning are approximately $T_c = 7.562 \times 10^7$ K and $\rho_c = 0.711$ g cm$^{-3}$ across all networks. However, the size of the convective core varies slightly due to differences in reaction rates \textbf{A21}: $M_{\rm conv, H} = 8.20 M_\odot$, \textbf{OB}: $M_{\rm conv, H} = 7.61 M_\odot$, \textbf{M128}: $M_{\rm conv, H} = 7.80 M_\odot$, \textbf{M206}: $M_{\rm conv, H} = 7.85 M_\odot$ , These differences influence the available hydrogen fuel, affecting the duration of core hydrogen burning. The OB network, with the smallest convective core, leads to a shorter main sequence lifetime compared to A21, which has the largest hydrogen-burning core.
+
+\subsubsection{Transition to Helium Burning}
+
+As core hydrogen depletes, the star leaves the main sequence and contracts, increasing the core temperature until helium burning ignites. Helium burning occurs primarily through the triple-alpha process, where three helium nuclei ($^4$He) combine to form carbon ($^{12}$C), with a small fraction further converted into oxygen ($^{16}$O). The convective helium core mass at ignition follows a similar trend to the hydrogen-burning phase: \textbf{A21}: $M_{\rm conv, He} = 6.90 M_\odot$, \textbf{OB}: $M_{\rm conv, He} = 7.23 M_\odot$, \textbf{M128}: $M_{\rm conv, He} = 8.19 M_\odot$, \textbf{M206}: $M_{\rm conv, He} = 8.20 M_\odot$. The OB network exhibits the largest helium core due to its extended convective mixing, while A21 retains a slightly smaller core mass. This variation has direct implications for later burning stages, as a larger helium core produces more carbon and oxygen, affecting carbon ignition conditions.
+
+\subsubsection{Carbon Ignition and Late Burning Stages}
+
+Once helium is exhausted, carbon burning initiates when $T_c$ exceeds $5 \times 10^8$ K. The ignition conditions vary among networks due to differences in the C/O ratio established during helium burning. The OB and M206 networks, which produced more oxygen relative to carbon, require slightly higher temperatures to ignite carbon burning compared to A21. The temperatures at carbon ignition are: \textbf{A21}: $T_c = 6.016 \times 10^8$ K, \textbf{OB}: $T_c = 8.269 \times 10^8$ K, \textbf{M128}: $T_c = 8.607 \times 10^8$ K, \textbf{M206}: $T_c = 8.700 \times 10^8$ K. Notably, the OB and M206 networks reach carbon ignition significantly earlier than A21, due to a higher accumulation of oxygen. The presence of an extended convective carbon-burning shell in OB and M206 suggests that additional mixing enhances fuel consumption, potentially delaying neon and oxygen ignition.
+
+\subsubsection{Impact on Final Evolutionary Pathways}
+
+The differences in nuclear networks lead to variations in the final core composition, influencing whether the star collapses into a neutron star or a black hole. The total carbon-oxygen (CO) core mass at oxygen exhaustion is a critical factor:\textbf{A21}: $M_{\rm CO} = 6.91 M_\odot$, \textbf{OB}: $M_{\rm CO} = 7.23 M_\odot$, \textbf{M128}: $M_{\rm CO} = 8.20 M_\odot$, \textbf{M206}: $M_{\rm CO} = 8.20 M_\odot$. Stars with CO cores exceeding $7-8 M_\odot$ are strong candidates for direct black hole formation, while those with smaller cores may explode as supernovae, leaving behind neutron star remnants.
+
+
+\subsection{Across Metallicity and Mass}
+
+The nuclear burning stages in massive stars are deeply influenced by initial mass and metallicity ($Z$). Tables 6, 7, 8, and 9 outline the key evolutionary milestones—hydrogen (H), helium (He), carbon (C), and oxygen (O) ignition and exhaustion—across different metallicities and masses. The variations in ignition temperatures, densities, core masses, and evolutionary timescales highlight the effects of mass loss, opacity, and nuclear burning efficiency on a star’s fate. 
+
+\subsubsection{Hydrogen and Helium Burning: Foundations for Later Evolution}
+
+Hydrogen burning, primarily via the CNO cycle in massive stars, dominate the main sequence lifetime. The onset of H burning is relatively uniform across different metallicities, but the duration of core H burning is strongly dependent on metallicity.
+
+At solar metallicity ($Z = Z_\odot$), stars maintain a relatively extended main sequence phase due to increased opacity from metals, which slows core contraction. In contrast, metal-poor ($Z = 10^{-4} - 10^{-7}$) and metal-free ($Z = 0$) stars experience more efficient radiative energy loss, causing more rapid H exhaustion. This leads to shorter main sequence lifetimes and higher core densities at the end of H burning.
+
+\paragraph{Impact of Mass on H Burning:}
+Higher-mass models (20 and 25M$_\odot$) sustain larger convective cores due to their stronger temperature sensitivity to the CNO cycle. For instance, at $Z = Z_\odot$, the H-burning convective core masses are: $M_{\rm conv, H} = 6.70 M_\odot$ for $15 M_\odot$, $M_{\rm conv, H} = 8.94 M_\odot$ for $20 M_\odot$, $M_{\rm conv, H} = 11.20 M_\odot$ for $25 M_\odot$. As mass increases, higher central temperatures ($T_c$) and densities ($\rho_c$) allow for more efficient H fusion, extending core burning phases.
+
+\paragraph{Helium Burning Transition:}
+When H is exhausted, the core contracts, increasing $T_c$ until He fusion begins via the triple-alpha process. The ignition conditions of He burning exhibit clear trends:
+\begin{itemize}
+    \item  Metal-poor stars have higher core densities at He ignition, as lower opacities lead to more compact structures.
+    \item Higher-mass models transition smoothly from H to He burning, while lower-mass models ($M = 15 M_\odot$) undergo a more significant contraction before reaching He ignition conditions.
+    \item The He core mass ($M_{\alpha}$) at ignition increases with mass, affecting subsequent carbon formation.
+\end{itemize}
+
+For instance, at $Z = 10^{-4}$, the He core mass at ignition follows: $M_{\alpha} = 6.50 M_\odot$ for $15 M_\odot$, 8.23 $M_\odot$ for $20 M_\odot$ and 11.10$M_\odot$ for $25 M_\odot$. These variations influence the amount of carbon and oxygen available for later burning stages.
+
+\subsubsection{Carbon Burning: Influence of Metallicity and Mass}
+
+Carbon burning occurs when the core reaches $T_c \gtrsim 5 \times 10^8$ K, triggering $^{12}$C fusion via $^{12}$C($^{12}$C,$\alpha$)$^{20}$Ne and $^{12}$C($^{12}$C,p)$^{23}$Na. The conditions for carbon ignition show systematic trends across metallicity and mass:
+
+\begin{itemize}
+    \item Lower-metallicity ($Z \leq 10^{-4}$) stars have higher core densities at carbon ignition, facilitating earlier onset of carbon burning.
+    \item Metal-rich stars maintain lower core densities, delaying C ignition slightly.
+    \item The He core mass at C ignition increases with metallicity, leading to larger CO cores in later stages.
+\end{itemize}
+
+\paragraph{Impact of Mass:}
+At $Z = 10^{-3}$, the C-burning core masses are:$M_{\rm CO} = 5.60 M_\odot$ for $15 M_\odot$, 7.45$M_\odot$ for $20 M_\odot$, 9.96$M_\odot$ for $25 M_\odot$. This variation in CO core size influences whether a star will undergo core-collapse supernova (CCSN) or pair-instability supernova (PISN). Stars with larger CO cores ($M_{\rm CO} > 7-8 M_\odot$) at oxygen exhaustion are more likely to form direct black holes.
+
+\subsubsection{Oxygen Burning: The Final Hydrostatic Stage}
+
+Oxygen burning occurs when $T_c \gtrsim$ 1.5 GK. The duration of this stage and the amount of synthesised silicon ($^{28}$Si) and iron-group elements depend on core mass and metallicity.
+
+\paragraph{Key Trends at O Ignition:}
+\begin{itemize}
+    \item Lower-mass stars ($15 M_\odot$) have shorter O-burning phases, producing less iron.
+    \item Higher-mass stars ($\geq 25 M_\odot$) sustain longer O-burning periods, generating significant amounts of silicon and iron-group elements.
+    \item The presence of convective O-burning shells in some models suggests enhanced mixing, affecting final nucleosynthesis yields.
+\end{itemize}
+
+\paragraph{Core Masses at O Exhaustion:}
+\begin{itemize}
+    \item At $Z = Z_\odot$, the O-exhausted core mass is $M_{\rm O} \approx 7.5-9.5 M_\odot$.
+    \item At $Z = 10^{-6}$, the O core mass is $M_{\rm O} \approx 10-11 M_\odot$, significantly larger than its metal-rich counterparts.
+\end{itemize}
+
+This confirms that metal-free and metal-poor stars retain larger CO cores, favoring direct black hole formation, while metal-rich stars with smaller CO cores are more likely to undergo iron-core collapse.
+
+\subsubsection{Final Remnant Formation and Supernovae}
+
+The core masses at exhaustion stages provide insight into remnant formation:
+
+\begin{itemize}
+    \item Direct black hole formation: Stars with $M_{\rm CO} > 7-8 M_\odot$ at O exhaustion likely bypass supernovae and collapse directly.
+    \item Supernova fallback mechanisms: Some models retain significant unburned carbon at O exhaustion, suggesting fallback-accretion mechanisms could influence explosion dynamics.
+\end{itemize}
+
+\subsection{Across various rates of CBM}
+
+CBM plays a crucial role in extending convective regions beyond the boundaries set by the Schwarzschild criterion, facilitating enhanced mixing of fuel into burning regions. This affects stellar lifetimes, core growth, and subsequent burning stages. While the previously discussed results primarily focus on the influence of mass and metallicity, here we explore the consequences of varying CBM prescriptions, as inferred from the central temperature-density ($T_c$-$\rho_c$) evolution and HRDs.
+
+\subsubsection{CBM and Hydrogen Burning: Core Growth and Main Sequence Evolution}
+
+The treatment of CBM strongly influences the structure and evolution of the convective hydrogen-burning core. More efficient CBM (e.g., larger overshooting or diffusive mixing) extends the convective core, increasing the amount of hydrogen available for fusion and thereby prolonging the main sequence lifetime.
+
+\paragraph{Trends in the HR Diagram:} 
+Comparing the HRDs of models with different CBM prescriptions reveals that:
+\begin{itemize}
+    \item Models with \textbf{strong CBM} (higher overshoot parameter) tend to evolve more slowly across the main sequence, remaining at higher luminosities for a longer duration.
+    \item Models with \textbf{weaker CBM} (less overshooting or step-function boundary treatment) tend to leave the main sequence earlier due to a smaller hydrogen reservoir in the convective core.
+\end{itemize}
+
+For instance, models with extended CBM show:
+\begin{itemize}
+    \item \textbf{Lower effective temperatures} during the main sequence due to larger convective cores.
+    \item \textbf{Delayed hydrogen exhaustion}, allowing more gradual post-main-sequence expansion.
+    \item \textbf{More luminous post-main-sequence evolution}, as the larger He cores retain more thermal energy.
+\end{itemize}
+
+\paragraph{Effects on Central Temperature-Density ($T_c$-$\rho_c$):}
+A larger convective core due to CBM means that hydrogen burning proceeds at lower central densities and temperatures during the main sequence compared to models with less mixing. This results in:
+\begin{itemize}
+    \item \textbf{Lower peak $T_c$ during the main sequence}, reducing the rate of CNO cycle burning and leading to a longer-lived core.
+    \item \textbf{A more massive helium core at H exhaustion}, which affects later burning stages.
+\end{itemize}
+
+\subsubsection{CBM and Helium Burning: Effects on Core Structure and Mixing}
+
+During helium burning, CBM influences the extent of convective helium-burning cores, altering the He-burning lifetime and the eventual C/O composition of the core.
+
+\paragraph{Trends in the HR Diagram:}
+\begin{itemize}
+    \item Models with \textbf{strong CBM} tend to have more extended blue loops during helium burning, as the additional mixing enhances the efficiency of core burning.
+    \item Models with \textbf{less CBM} tend to transition into red supergiant (RSG) structures earlier, with less luminous blue loops.
+\end{itemize}
+
+\paragraph{Trends in $T_c$-$\rho_c$:}
+More extensive CBM leads to:
+\begin{itemize}
+    \item Lower central densities at He exhaustion, making the core less degenerate.
+    \item Higher final He-core masses, influencing the onset of carbon burning.
+    \item More gradual temperature evolution, delaying C ignition slightly in models with extended CBM.
+\end{itemize}
+
+\subsubsection{CBM and Advanced Burning: Implications for Carbon and Oxygen Burning}
+
+CBM affects not only the convective boundaries of early burning stages but also the size and structure of the carbon-oxygen core at later stages, influencing the conditions for carbon ignition.
+
+\paragraph{Effects on Carbon Burning:}
+Models with stronger CBM tend to:
+\begin{itemize}
+    \item Ignite carbon burning at slightly lower central densities due to their more massive C/O cores.
+    \item Exhibit longer carbon-burning lifetimes, as mixing prolongs the availability of fuel.
+    \item Form larger oxygen-rich cores, influencing later oxygen and silicon burning stages.
+\end{itemize}
+
+\paragraph{Effects on Oxygen Burning:}
+The effects of CBM on O burning are primarily seen in:
+\begin{itemize}
+    \item Onset of convective O burning—more extended CBM leads to stronger convective O-burning shells.
+    \item Core-collapse characteristics—CBM influences whether the final remnant is a neutron star (NS) or a black hole (BH).
+\end{itemize}
+
+\subsubsection{Implications for Supernova Progenitors and Final Remnants}
+
+The impact of CBM on the final fate of a massive star is significant:
+\begin{itemize}
+    \item More CBM $\rightarrow$ Larger CO core: Increases the likelihood of forming a direct-collapse black hole.
+    \item Less CBM $\rightarrow$ Smaller CO core: More favorable conditions for neutron star formation.
+    \item Delayed ignition times: Leads to different pre-supernova structures, affecting supernova explosions and fallback accretion.
+\end{itemize}
